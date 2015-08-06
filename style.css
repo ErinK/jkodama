@@ -1,0 +1,660 @@
+/*
+	Custom Website for JustinKodama.com
+	Design by Justin Kodama
+	Development by Erin Kodama
+
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:400 16px/1.5 "HelveticaNeue-CondensedBold","Helvetica Neue", Helvetica, Lato;
+	color:#333;
+}
+
+p, div, ul, ol, h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+
+h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3 {
+	font-family: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,Lato;
+    font-stretch: condensed;
+    font-weight: 600;	
+}
+h1 { font-size: 53px; }
+h2 { font-size: 36px; }
+h3 { font-size: 18px; font-weight: 600; }
+h4 { font-size: 16px; }
+h5 {}
+h6 {}
+
+p { margin-bottom: 16px; }
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+
+ol, ul { list-style-position: inside; }
+ul.hyphen-list {
+	list-style: none;
+}
+
+ul.hyphen-list li:before { content: "- ";}
+
+img {
+	max-width:100%;
+	vertical-align:bottom;
+	height: auto;
+}
+.alignright,
+.alignleft {}
+.alignleft {
+	float: left;
+	margin: 10px 40px 10px 0;	
+}
+.alignright {
+	float: right;
+	margin: 10px 0 10px 40px; 	
+}
+
+a {
+	color:#444;
+	text-decoration:none;
+	transition: all 0.4s ease;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+.accessible {
+	position: absolute;
+	text-indent: -9999px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:960px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+.nav ul {
+	margin: 0; 
+	padding: 0;
+	list-style: none;
+}
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+
+/* columns */
+
+.row { clear: both; display: block;  }
+
+.col {
+	position: relative;
+	float: left;	
+	padding: 0 1.5%;
+}
+
+.col.first { padding-left: 0; }
+.col.last { padding-right: 0; }
+
+.one-half { width: 50%;}
+.one-third { width: 33.5%; }
+.one-third.first, 
+.one-third.last { width: 32%; }
+.two-third { width: 66.25%; }
+.one-fourth { width: 25%; }
+.three-fourth { width: 75%; }
+.one-fifth { width: 20%; }
+.two-fifth { width: 40%; }
+.three-fifth { width: 60%; }
+.four-fifth { width: 80%}
+
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+
+#header { margin-bottom: 50px; color: #FFF; }
+
+#header .page-title {}
+
+#header .nav {
+	background: url(images/blue-header-bg.png) repeat;
+	padding: 25px 0; 
+	text-align: center;	
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+
+.webOS #header .nav {
+	background: url(images/header-nav-bg.png) repeat;
+	position: relative;
+}
+
+#header .nav ul > li {
+	display: inline-block;
+	margin: 0 3px;
+	vertical-align: top;
+}
+#header  .nav li a { 
+	color: #FFF; 
+    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,Lato;
+    font-stretch: condensed;
+	text-transform: uppercase; 
+	font-weight: 600;
+	font-size: 17px;
+	opacity: .85;
+}
+#header  .nav li a:hover {}
+
+#header .nav ul li ul {}
+
+#header .nav ul li:hover ul { }
+
+#header .nav ul li ul li {
+	display: inline-block;
+	float: none;
+	z-index: 9999;
+}
+
+#header .nav ul li ul li a {}
+#header .nav ul li ul li a:hover {
+	color: #FFF;
+}
+
+#header #portfolio-menu { cursor: pointer; }
+
+/* Dropdown */
+#header .nav .dropdown {
+    padding: 0 11% 1% 14%;
+    width: 100%;
+    z-index: 9999;
+	position: absolute;
+	background: url(images/blue-header-bg.png) repeat; 
+	top: 76px; 
+	display: none;
+}
+
+#header .nav .dropdown .menu-section { width: 100%; clear: both; }
+#header .nav .dropdown .menu-section h3 { display: inline-block; width: 8%; vertical-align: middle; font-size: 30px; }
+#header .nav .dropdown .menu-section .submenu { display: inline-block; width: 91.5%; vertical-align: middle; }
+#header .nav .dropdown .menu-section .submenu li { width: 11.25%; padding: 1.5%; text-align: center; }
+#header .nav .dropdown .menu-section .submenu li a { opacity: 1.0; }
+#header .nav .dropdown .menu-section .submenu li a img { box-shadow: none; opacity: .90; transition: all 0.4s ease; }
+#header .nav .dropdown .menu-section .submenu li a:hover img { opacity: 1.0; }
+
+#header .header-content { padding-top: 135px; }
+
+.loyal3-purchase-flow #header .nav { background: url(images/blue-header-bg.png) repeat; }
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+#main {}
+
+/*------------------------------------*\
+    HOME
+\*------------------------------------*/
+
+.home #header {
+	background-image: url("images/header.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 467px;
+    text-align: center;	
+}
+
+.home #header .profile-pic { margin-top: 60px; }
+.home #header .page-title {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.home #header .subhead {
+    color: rgba(255, 255, 255, 0.65);
+    font-family: Lato, arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -4px;
+    text-align: center;	
+}
+
+.home .center-column {
+	width: 100%;
+	max-width: 550px;	
+	margin: 0 auto 100px; 
+}
+
+/*------------------------------------*\
+    PORTFOLIO PAGES
+\*------------------------------------*/
+
+.portfolio #header {
+	padding: 0; 	
+}
+
+.portfolio #header .page-title { opacity: .98; line-height: 1.3em; }
+.portfolio #header p { opacity: .90; }
+.portfolio .portfolio-section { padding: 50px 0;}
+.portfolio .portfolio-section.other { padding: 80px 0 90px; }
+
+.portfolio .portfolio-section.grey { background: #f2f2f2; }
+.portfolio .portfolio-section.dark { background: #949494; color: #FFF; }
+.portfolio .section-title {
+	color: #333;
+	font-size: 50px;
+	margin-bottom: 12px; 
+}
+.portfolio .portfolio-section.dark .section-title { color: #FFF; }
+.portfolio .portfolio-section.other .section-title { text-align: center; margin-bottom: 12px; }
+.portfolio .image-three-col {}
+.portfolio .image-three-col img { margin: 0 auto 15px; display: block; }
+.portfolio .image-three-col h3 { text-align: center;}
+
+.portfolio .image-two-col { margin-bottom: 50px; }
+.portfolio .image-two-col img { display: block; width: 100%; }
+.portfolio .image-two-col h3 {}
+
+/*------------------------------------*\
+    LOYAL3
+\*------------------------------------*/
+
+.loyal3 {}
+.loyal3 #header {
+	background: #0084ad;	
+}
+
+
+
+/*------------------------------------*\
+    LOYAL3 - iPhone App
+\*------------------------------------*/
+
+.portfolio.loyal3-app {}
+.portfolio.loyal3-app #header { height: 568px; margin-bottom: 100px;  }
+.portfolio.loyal3-app #header .hero {
+	position: relative;
+}
+
+.portfolio.loyal3-app #header .hero img {
+	position: absolute;	
+	top: 0;
+	right: 0;
+}
+.portfolio.loyal3-app .portfolio-section.designs .description { margin-bottom: 50px; }
+
+.portfolio.loyal3-app .image-grid { width: 100%; max-width: 890px;  }
+.portfolio.loyal3-app .image-grid .one-fourth { width: 26.7%; }
+.portfolio.loyal3-app .image-grid .three-fourth { width: 73%; margin-top: 55px; padding-left: 6px; } 
+
+ul.screen-list { margin: 0; padding: 0; text-align: left; }
+ul.screen-list li {
+	list-style: none;
+	display: inline-block;	
+	margin: 0 16px 16px 0;
+}
+.styleguide-description { }
+.styleguide-widgets { margin-top: 29px; }
+
+.iphone-documentation .description { max-width: 650px; }
+.iphone-documentation img { margin-bottom: 30px; }
+.iphone-documentation img:last-child { margin-bottom: 0; }
+
+/*--------------------------------------------*\
+    LOYAL3 - Issuer Portal & Purchase Flow
+\*--------------------------------------------*/
+
+.portfolio.loyal3-portal {}
+.portfolio.loyal3-portal #header,
+.portfolio.loyal3-purchase-flow #header { text-align: center; height: 620px; margin-bottom: 200px; }
+
+.portfolio.loyal3-portal .page-title,
+.portfolio.loyal3-purchase-flow .page-title { font-size: 63px; }
+
+.portfolio.loyal3-portal #header .description,
+.portfolio.loyal3-purchase-flow #header .description {
+	font-size: 20px;
+    margin: 0 auto 65px;
+    max-width: 400px;
+    opacity: 0.75;
+    width: 100%;	
+}
+
+.portfolio.loyal3-purchase-flow #header .description { max-width: 100%; }
+
+.portfolio.loyal3-portal #header img,
+.portfolio.loyal3-purchase-flow #header img {
+	-webkit-box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);	
+}
+
+.portfolio.loyal3-portal .section-title,
+.portfolio.loyal3-purchase-flow .section-title { text-align: center; }
+
+.portfolio.loyal3-portal .about .one-half { padding-right: 5%; }
+.portfolio-section.dashboard .description,
+.final-designs .description { text-align: center; width: 100%; max-width: 640px; margin: 0 auto 30px; }
+
+.nav-architecture .section-title,
+.purchase-page .section-title { margin-bottom: 30px; }
+.nav-architecture .description { margin-bottom: 5px; }
+.nav-architecture img { margin-bottom: 50px; }
+
+.final-designs .one-half.last img:first-child { margin-bottom: 40px; }
+
+.purchase-page .description,
+.review .description { width: 100%; max-width: 705px; margin: 0 auto 12px;  }
+.purchase-page .description p { margin-bottom: 0; }
+.purchase-page img,
+.review img { margin: 0 auto 50px; display: block; }
+
+
+/*------------------------------------*\
+    webOS
+\*------------------------------------*/
+.webOS #header { background: #f9a03f; }
+.portfolio.webOS .portfolio-section.grey { }
+.webOS .section-title { margin-bottom: 0; }
+
+
+/*------------------------------------*\
+    webOS Keyboard
+\*------------------------------------*/
+.webOS-keyboard {}
+.webOS-keyboard #header { text-align: center; height: 620px; margin-bottom: 180px; }
+.webOS-keyboard .page-title { font-size: 63px; }
+
+.webOS-keyboard #header .description {
+	font-size: 20px;
+    margin: 0 auto 65px;
+    opacity: 0.75;
+    width: 100%;	
+}
+
+.webOS-keyboard #header img {
+	-webkit-box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 35px 0px rgba(0,0,0,0.3);	
+}
+
+.webOS-keyboard .about .section-title { text-align: center; margin-bottom: 12px;  }
+.webOS-keyboard .initial { padding: 70px 0; }
+
+/*------------------------------------*\
+    webOS Email & Messaging
+\*------------------------------------*/
+.webOS-email #header img,
+.webOS-messaging #header img { margin-bottom: 50px;  }
+.webOS-email .portfolio-section .description,
+.webOS-messaging .portfolio-section .description { margin-bottom: 30px; }
+
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+
+#footer {
+	background: #f2f2f2 none repeat scroll 0 0;
+    border-top: 1px solid #b3b3b3;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Lato;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (max-width:1280px) {
+
+}
+@media only screen and (max-width:1140px) {
+
+}
+@media only screen and (max-width:1024px) {
+
+}
+@media only screen and (max-width:991px) {
+
+}
+@media only screen and (max-width:768px) {
+
+	/* Columns */
+	.col,
+	.col.first,
+	.col.last { float: none; margin: 0; padding-left: 0; padding-right: 0;  }
+	.col.one-half,
+	.col.one-third,
+	.col.two-third,
+	.col.one-fourth,
+	.col.three-fourth,
+	.col.one-fifth,
+	.col.two-fifth,
+	.col.three-fifth,
+	.col.four-fifth { width: 100% !important; }
+	
+	.col img { display: block; margin-left: auto; margin-right: auto; margin-bottom: 40px;  }
+	
+	/* Header */
+	#header { height: auto !important; margin-bottom: 40px !important; }
+	#header img { position: relative !important; margin-bottom: 40px !important }
+	
+	.portfolio.loyal3-portal .page-title, 
+	.portfolio.loyal3-purchase-flow .page-title { font-size: 53px;}
+	
+	/* Main */
+	.portfolio .portfolio-section { padding: 40px 0; }
+	
+	.webOS-keyboard .about .section-title,
+	.portfolio.loyal3-portal .section-title, 
+	.portfolio.loyal3-purchase-flow .section-title { text-align: left; }
+	
+	
+	/* Home */
+	.home #header { padding-bottom: 150px !important; }
+	.home #header .profile-pic { margin-bottom: 5px !important; }
+	
+}
+@media only screen and (max-width:480px) {
+
+	/* Common */
+	h1 { font-size: 46px; }
+	
+	/* Header */
+	
+	/* Main */
+	.portfolio .section-title { font-size: 36px; }
+
+}
+@media only screen and (max-width:320px) {
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
