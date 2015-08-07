@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/custom.js"></script>
@@ -18,10 +19,21 @@
 	<header id="header">
     	<nav id="header-nav" class="nav">
         	<div class="wrapper">
-                <ul>
-                    <li><a href="#">Justin Kodama</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                </ul>
+                <div class="menu-left"><a href="index.html">Justin Kodama</a></div>
+                <div class="menu-right">
+                	<ul class="portfolio-menu">
+                    	<li id="portfolio-item"><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a>
+                        	<ul class="submenu">
+                            	<li><a href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<a href="pdfs/JustinKodamaResume.pdf" target="_blank">
+                        		<i class="fa fa-file-text"></i>Resume
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     	<div class="wrapper header-content">
