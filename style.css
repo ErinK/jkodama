@@ -283,29 +283,8 @@ input:focus {
 
 #header #portfolio-menu { cursor: pointer; }
 
-/* Dropdown 
-#header .nav .dropdown {
-    padding: 0 11% 1% 14%;
-    width: 100%;
-    z-index: 9999;
-	position: absolute;
-	background: url(images/blue-header-bg.png) repeat; 
-	top: 76px; 
-	display: none;
-}
-
-#header .nav .dropdown .menu-section { width: 100%; clear: both; }
-#header .nav .dropdown .menu-section h3 { display: inline-block; width: 8%; vertical-align: middle; font-size: 30px; }
-#header .nav .dropdown .menu-section .submenu { display: inline-block; width: 91.5%; vertical-align: middle; }
-#header .nav .dropdown .menu-section .submenu li { width: 11.25%; padding: 1.5%; text-align: center; }
-#header .nav .dropdown .menu-section .submenu li a { opacity: 1.0; }
-#header .nav .dropdown .menu-section .submenu li a img { box-shadow: none; opacity: .90; transition: all 0.4s ease; }
-#header .nav .dropdown .menu-section .submenu li a:hover img { opacity: 1.0; }
-*/
 #header .header-content { padding-top: 135px; }
 
-/* .loyal3-purchase-flow #header .nav { background: url(images/blue-header-bg.png) repeat; }
-*/
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
