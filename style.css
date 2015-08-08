@@ -231,7 +231,7 @@ input:focus {
 	background: #fab365;
 }
 
-#header  .nav a { 
+#header .nav a { 
 	color: #FFF; 
     font-family: "HelveticaNeue-CondensedBold","Helvetica Neue",Helvetica,Lato;
     font-stretch: condensed;
@@ -249,7 +249,7 @@ input:focus {
 }
 
 #header .nav ul li ul {
-	opacity: 0;	
+	display: none;
 	position: absolute;
 	background: #5cb1ca;
 	text-align: left;
@@ -258,7 +258,7 @@ input:focus {
 	-webkit-transition: all 0.4s ease;
 }
 
-#header .nav ul li:hover ul { opacity: 1; }
+#header .nav ul li:hover ul { display: block; }
 
 #header .nav ul li ul li {
 	display: block;
