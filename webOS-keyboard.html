@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/custom.js"></script>
@@ -18,11 +19,27 @@
 	<header id="header">
     	<nav id="header-nav" class="nav">
         	<div class="wrapper">
-                <ul>
-                    <li><a href="#">Justin Kodama</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                </ul>
-            </div>
+                <div class="menu-left"><a href="index.html">Justin Kodama</a></div>
+                <div class="menu-right">
+                	<ul class="portfolio-menu">
+                    	<li id="portfolio-item"><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a>
+                        	<ul class="submenu">
+                            	<li><a href="loyal3-iphone-app.html">LOYAL3 iPhone App</a></li>
+                                <li><a href="loyal3-analytics.html">LOYAL3 Issuer Portal</a></li>
+                                <li><a href="loyal3-purchase-flow-redesign.html">LOYAL3 Purchase Flow Redesign</a></li>
+                            	<li><a href="webOS-keyboard.html">webOS Keyboard</a></li>
+                                <li><a href="webOS-email.html">webOS Email with Touchpad</a></li>
+                                <li><a href="webOS-messaging.html">webOS Messaging</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<a href="pdfs/JustinKodamaResume.pdf" target="_blank">
+                        		<i class="fa fa-file-text"></i>Resume
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- .menu-right -->
+            </div><!-- end .wrapper -->
         </nav>
     	<div class="wrapper header-content">
             <h1 class="page-title">webOS Keyboard</h1>
