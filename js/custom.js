@@ -18,4 +18,16 @@ $( document ).ready(function() {
     $('#portfolio-menu').click(function(){
 		$('.dropdown').stop( true, true ).slideToggle();	
 	});
+	
+	/* Mobile Menu */
+	function checkNav(){
+		if( $('#mobile-menu-icon').css('display') == 'block' ){
+			$('#resume-item').appendTo('#portfolio-item .submenu');
+		} else {
+			$('#resume-item').appendTo('.portfolio-menu');
+		}
+	}
+	// call the function on dom ready and on resize
+	checkNav();
+	$(window).resize(checkNav);
 });

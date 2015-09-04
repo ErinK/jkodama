@@ -24,7 +24,7 @@ html {
 	font-size:62.5%;
 }
 body {
-	font:400 16px/1.5 "HelveticaNeue-CondensedBold","Helvetica Neue", Helvetica, Lato;
+	font:400 16px/1.5 "Helvetica Neue", Helvetica, Lato;
 	color:#333;
 }
 
@@ -249,16 +249,17 @@ input:focus {
 }
 
 #header .nav ul li ul {
-	display: none;
+	opacity: 0;
 	position: absolute;
+	right: -9999px;
 	background: #5cb1ca;
 	text-align: left;
 	width: 250px;
-	transition: all 0.4s ease;
-	-webkit-transition: all 0.4s ease;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
 }
 
-#header .nav ul li:hover ul { display: block; }
+#header .nav ul li:hover ul { opacity: 1; right: auto; }
 
 #header .nav ul li ul li {
 	display: block;
@@ -284,6 +285,8 @@ input:focus {
 #header #portfolio-menu { cursor: pointer; }
 
 #header .header-content { padding-top: 135px; }
+
+#mobile-menu-icon { display: none; }
 
 /*------------------------------------*\
     PAGES
@@ -642,6 +645,32 @@ ul.screen-list li {
 	h1 { font-size: 46px; }
 	
 	/* Header */
+	
+	#header .nav {}
+	#header-nav .wrapper { width: 100%; }
+	#header .menu-left,
+	#mobile-menu-icon { margin: 0; padding: 18px 19px; line-height: 1em; }
+	
+	#mobile-menu-icon { 
+		display: block; 
+		position: absolute;
+		right: 0;
+		padding: 19px; 
+		cursor: pointer;
+		background: #fac188;
+	}
+	.portfolio-menu { display: block; }
+	#portfolio-item > a { position: absolute; text-indent: -9999px; }
+	#resume-item i { display: none; }
+	
+	#header .nav ul li ul {
+		opacity: 1;
+		right: auto;
+		width: 100%;
+	}
+	#header .nav ul li ul li {
+		display: block; 	
+	}
 	
 	/* Main */
 	.portfolio .section-title { font-size: 36px; }
