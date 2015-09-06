@@ -275,12 +275,14 @@ input:focus {
     padding: 16px;
     text-transform: none;	
 }
-#header .nav ul li ul li a:hover {
+#header .nav ul li ul li a:hover,
+#header .nav ul li ul li a.active {
 	color: #FFF;
 	background: #76c6dd;
 }
 
-.webOS #header .nav ul li ul li a:hover { background: #fbd0a0; }
+.webOS #header .nav ul li ul li a:hover,
+.webOS #header .nav ul li ul li a.active { background: #fbd0a0; }
 
 #header #portfolio-menu { cursor: pointer; }
 
@@ -427,7 +429,7 @@ input:focus {
 .portfolio.loyal3-app .image-grid .one-fourth { width: 26.7%; }
 .portfolio.loyal3-app .image-grid .three-fourth { width: 73%; margin-top: 55px; padding-left: 6px; } 
 
-ul.screen-list { margin: 0; padding: 0; text-align: left; }
+ul.screen-list { margin: 0; padding: 0; text-align: center; }
 ul.screen-list li {
 	list-style: none;
 	display: inline-block;	
@@ -626,27 +628,47 @@ ul.screen-list li {
 	.portfolio.loyal3-portal .page-title, 
 	.portfolio.loyal3-purchase-flow .page-title { font-size: 53px;}
 	
+	.webOS-keyboard #header .description { margin-bottom: 35px; }
+	
 	/* Main */
 	.portfolio .portfolio-section { padding: 40px 0; }
+	
+	.portfolio .section-title { font-size: 40px; }
 	
 	.webOS-keyboard .about .section-title,
 	.portfolio.loyal3-portal .section-title, 
 	.portfolio.loyal3-purchase-flow .section-title { text-align: left; }
 	
+	ul.screen-list li { margin-left: 8px; margin-right: 8px; }
+	ul.screen-list li img { margin: 0; }
+	
+	.styleguide-widgets img { margin: 16px auto; }
+	
+	.portfolio-section.dashboard .description, 
+	.final-designs .description { text-align: left; }
+	
+	.portfolio .image-three-col h3 { text-align: left; }
+	
 	
 	/* Home */
 	.home #header { padding-bottom: 150px !important; }
 	.home #header .profile-pic { margin-bottom: 5px !important; }
+	.home .downloads img { margin-left: 0; }
+	.home .downloads p { width: auto; text-align: left; }
 	
 }
 @media only screen and (max-width:480px) {
 
 	/* Common */
-	h1 { font-size: 46px; }
+	h1,
+	.portfolio.loyal3-portal .page-title, 
+	.portfolio.loyal3-purchase-flow .page-title,
+	.webOS-keyboard .page-title { font-size: 40px; }
 	
 	/* Header */
 	
 	#header .nav {}
+	#header .nav a { opacity: 1.0; }
 	#header-nav .wrapper { width: 100%; }
 	#header .menu-left,
 	#mobile-menu-icon { margin: 0; padding: 18px 19px; line-height: 1em; }
@@ -655,25 +677,37 @@ ul.screen-list li {
 		display: block; 
 		position: absolute;
 		right: 0;
-		padding: 19px; 
+		padding: 19px 12px; 
 		cursor: pointer;
-		background: #fac188;
+		background: #5cb1ca;#fac188
 	}
+	.webOS #mobile-menu-icon { background: #fac188; }
+	#mobile-menu-icon i {}
 	.portfolio-menu { display: block; }
 	#portfolio-item > a { position: absolute; text-indent: -9999px; }
 	#resume-item i { display: none; }
 	
-	#header .nav ul li ul {
+	#header .nav ul li ul,
+	#header .nav ul li:hover ul {
 		opacity: 1;
-		right: auto;
+		right: 0;
 		width: 100%;
+		top: 54px;
 	}
+	#header .nav ul li ul { display: none; }
 	#header .nav ul li ul li {
 		display: block; 	
 	}
 	
+	#header .nav ul li ul li a { font-size: 18px; }
+	
+	#header .header-content {
+		padding-top: 90px;
+	}
+	
 	/* Main */
-	.portfolio .section-title { font-size: 36px; }
+	.portfolio .section-title { font-size: 34px; }
+	
 
 }
 @media only screen and (max-width:320px) {
